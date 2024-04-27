@@ -1,0 +1,486 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'egui-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=egui-tutorials",
+                    "--package=egui-tutorials"
+                ],
+                "filter": {
+                    "name": "egui-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'egui-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=egui-tutorials",
+                    "--package=egui-tutorials"
+                ],
+                "filter": {
+                    "name": "egui-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'ggez-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=ggez-tutorials",
+                    "--package=ggez-tutorials"
+                ],
+                "filter": {
+                    "name": "ggez-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'ggez-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=ggez-tutorials",
+                    "--package=ggez-tutorials"
+                ],
+                "filter": {
+                    "name": "ggez-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'gl-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=gl-tutorials",
+                    "--package=gl-tutorials"
+                ],
+                "filter": {
+                    "name": "gl-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'gl-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=gl-tutorials",
+                    "--package=gl-tutorials"
+                ],
+                "filter": {
+                    "name": "gl-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'glfw-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=glfw-tutorials",
+                    "--package=glfw-tutorials"
+                ],
+                "filter": {
+                    "name": "glfw-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'glfw-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=glfw-tutorials",
+                    "--package=glfw-tutorials"
+                ],
+                "filter": {
+                    "name": "glfw-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'glow-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=glow-tutorials",
+                    "--package=glow-tutorials"
+                ],
+                "filter": {
+                    "name": "glow-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'glow-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=glow-tutorials",
+                    "--package=glow-tutorials"
+                ],
+                "filter": {
+                    "name": "glow-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'glutin-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=glutin-tutorials",
+                    "--package=glutin-tutorials"
+                ],
+                "filter": {
+                    "name": "glutin-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'glutin-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=glutin-tutorials",
+                    "--package=glutin-tutorials"
+                ],
+                "filter": {
+                    "name": "glutin-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'lyon-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=lyon-tutorials",
+                    "--package=lyon-tutorials"
+                ],
+                "filter": {
+                    "name": "lyon-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'lyon-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=lyon-tutorials",
+                    "--package=lyon-tutorials"
+                ],
+                "filter": {
+                    "name": "lyon-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'miniquad-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=miniquad-tutorials",
+                    "--package=miniquad-tutorials"
+                ],
+                "filter": {
+                    "name": "miniquad-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'miniquad-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=miniquad-tutorials",
+                    "--package=miniquad-tutorials"
+                ],
+                "filter": {
+                    "name": "miniquad-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'pixels-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=pixels-tutorials",
+                    "--package=pixels-tutorials"
+                ],
+                "filter": {
+                    "name": "pixels-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'pixels-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=pixels-tutorials",
+                    "--package=pixels-tutorials"
+                ],
+                "filter": {
+                    "name": "pixels-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'sdl2-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=sdl2-tutorials",
+                    "--package=sdl2-tutorials"
+                ],
+                "filter": {
+                    "name": "sdl2-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'sdl2-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=sdl2-tutorials",
+                    "--package=sdl2-tutorials"
+                ],
+                "filter": {
+                    "name": "sdl2-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'vulkano-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=vulkano-tutorials",
+                    "--package=vulkano-tutorials"
+                ],
+                "filter": {
+                    "name": "vulkano-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'vulkano-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=vulkano-tutorials",
+                    "--package=vulkano-tutorials"
+                ],
+                "filter": {
+                    "name": "vulkano-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'wgpu-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=wgpu-tutorials",
+                    "--package=wgpu-tutorials"
+                ],
+                "filter": {
+                    "name": "wgpu-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'wgpu-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=wgpu-tutorials",
+                    "--package=wgpu-tutorials"
+                ],
+                "filter": {
+                    "name": "wgpu-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'winit-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=winit-tutorials",
+                    "--package=winit-tutorials"
+                ],
+                "filter": {
+                    "name": "winit-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'winit-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=winit-tutorials",
+                    "--package=winit-tutorials"
+                ],
+                "filter": {
+                    "name": "winit-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
