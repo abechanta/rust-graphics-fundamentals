@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = [
+    "egui-tutorials",
+    "ggez-tutorials",
+    "gl-tutorials",
+    "glfw-tutorials",
+    "glow-tutorials",
+    "glutin-tutorials",
+    "lyon-tutorials",
+    "miniquad-tutorials",
+    "pixels-tutorials",
+    "sdl2-tutorials",
+    "vulkano-tutorials",
+    "wgpu-tutorials",
+    "winit-tutorials",
+]
