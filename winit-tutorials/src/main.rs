@@ -1,45 +1,77 @@
-#[cfg(target_arch = "wasm32")]
-use wasm_bindgen::prelude::*;
+use std::rc::Rc;
+use winit::window::{Window, WindowAttributes};
 
-#[cfg_attr(target_arch = "wasm32", wasm_bindgen(start))]
 fn main() {
     use winit::dpi::PhysicalSize;
     use winit::event_loop::{ControlFlow, EventLoop};
-    use winit::window::WindowBuilder;
 
     let event_queue = EventLoop::new().unwrap();
     event_queue.set_control_flow(ControlFlow::Poll);
-    let window = WindowBuilder::new()
+    let window_attributes = WindowAttributes::default()
         .with_title("winit tutorial")
         .with_inner_size(PhysicalSize {
             width: 480,
             height: 320,
-        })
-        .build(&event_queue)
-        .unwrap();
+        });
 
-    #[cfg(target_arch = "wasm32")]
-    {
-        // use winit::dpi::PhysicalSize;
-        // let _ = window.request_inner_size(PhysicalSize::new(480, 320));
+    let mut my_app = MyApp {
+        window_attributes,
+        ..Default::default()
+    };
+    _ = event_queue.run_app(&mut my_app);
+}
 
-        use winit::platform::web::WindowExtWebSys;
-        web_sys::window()
-            .and_then(|win| win.document())
-            .and_then(|doc| {
-                let dst = doc.get_element_by_id("wasm-example")?;
-                let canvas = web_sys::Element::from(window.canvas()?);
-                dst.append_child(&canvas).ok()?;
-                Some(())
-            })
-            .expect("Couldn't append canvas to document body.");
+#[derive(Default)]
+struct MyApp {
+    window_attributes: WindowAttributes,
+    window: Option<Rc<Window>>,
+}
+
+use winit::application::ApplicationHandler;
+use winit::event::{DeviceEvent, DeviceId, WindowEvent};
+use winit::event_loop::ActiveEventLoop;
+use winit::window::WindowId;
+
+impl ApplicationHandler for MyApp {
+    fn about_to_wait(&mut self, event_loop: &ActiveEventLoop) {
+        if let Some(window) = &self.window {
+            window.request_redraw();
+        }
     }
 
-    use winit::event::{DeviceEvent, ElementState, Event, KeyEvent, WindowEvent};
-    use winit::keyboard::{KeyCode, PhysicalKey};
+    fn resumed(&mut self, event_loop: &ActiveEventLoop) {
+        let window = {
+            let window = event_loop
+                .create_window(self.window_attributes.clone())
+                .unwrap();
+            Rc::new(window)
+        };
+        self.window = Some(window);
+    }
 
-    _ = event_queue.run(move |event, window_target| match event {
-        Event::WindowEvent { event, .. } => match event {
+    fn suspended(&mut self, event_loop: &ActiveEventLoop) {
+        println!("suspended");
+    }
+
+    fn device_event(
+        &mut self,
+        event_loop: &ActiveEventLoop,
+        device_id: DeviceId,
+        event: DeviceEvent,
+    ) {
+        match event {
+            DeviceEvent::Added | DeviceEvent::Removed => {
+                println!("{:?}", event);
+            }
+            _ => {}
+        }
+    }
+
+    fn window_event(&mut self, event_loop: &ActiveEventLoop, id: WindowId, event: WindowEvent) {
+        use winit::event::{ElementState, KeyEvent};
+        use winit::keyboard::{KeyCode, PhysicalKey};
+
+        match event {
             WindowEvent::CloseRequested
             | WindowEvent::KeyboardInput {
                 event:
@@ -50,31 +82,21 @@ fn main() {
                     },
                 ..
             } => {
-                window_target.exit();
+                event_loop.exit();
             }
             WindowEvent::CursorMoved { .. } | WindowEvent::MouseInput { .. } => {
                 println!("{:?}", event);
             }
+            WindowEvent::Resized(_) => {
+                println!("{:?}", event);
+            }
             WindowEvent::RedrawRequested => {
-                // my_app.update();
-                // my_app.render();
+                // self.update();
+                // self.render();
             }
             _ => {
                 println!("{:?}", event);
             }
-        },
-        Event::DeviceEvent { event, .. } => match event {
-            DeviceEvent::Added | DeviceEvent::Removed => {
-                println!("{:?}", event);
-            }
-            _ => {}
-        },
-        Event::AboutToWait => {
-            window.request_redraw();
         }
-        Event::Suspended | Event::Resumed => {
-            println!("{:?}", event);
-        }
-        _ => {}
-    });
+    }
 }

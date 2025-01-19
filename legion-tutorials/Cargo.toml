@@ -1,0 +1,10 @@
+[package]
+name = "legion-tutorials"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ggez = "0.9.3"
+glam = { version = "0.25", features = ["mint"] }
+legion = "0.4.0"
+rayon = "1.10.0"

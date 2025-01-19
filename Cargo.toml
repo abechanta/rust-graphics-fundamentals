@@ -1,17 +1,29 @@
 [workspace]
 resolver = "2"
 members = [
+    "bevy-tutorials",
     "egui-tutorials",
     "ggez-tutorials",
     "gl-tutorials",
     "glfw-tutorials",
     "glow-tutorials",
     "glutin-tutorials",
+    "legion-tutorials",
     "lyon-tutorials",
+    "macroquad-tutorials",
     "miniquad-tutorials",
+    "piston-tutorials",
     "pixels-tutorials",
     "sdl2-tutorials",
+    "specs-tutorials",
     "vulkano-tutorials",
     "wgpu-tutorials",
     "winit-tutorials",
+    "wry-tutorials",
 ]
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3

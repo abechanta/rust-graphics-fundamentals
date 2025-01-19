@@ -1,0 +1,9 @@
+[package]
+name = "specs-tutorials"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ggez = "0.9.3"
+glam = { version = "0.25", features = ["mint"] }
+specs = "0.20.0"
