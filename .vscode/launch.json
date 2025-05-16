@@ -4,6 +4,43 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug executable 'bevy-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=bevy-tutorials",
+                    "--package=bevy-tutorials"
+                ],
+                "filter": {
+                    "name": "bevy-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'bevy-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=bevy-tutorials",
+                    "--package=bevy-tutorials"
+                ],
+                "filter": {
+                    "name": "bevy-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug executable 'egui-tutorials'",
             "cargo": {
                 "args": [
@@ -226,6 +263,43 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug executable 'legion-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=legion-tutorials",
+                    "--package=legion-tutorials"
+                ],
+                "filter": {
+                    "name": "legion-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'legion-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=legion-tutorials",
+                    "--package=legion-tutorials"
+                ],
+                "filter": {
+                    "name": "legion-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug executable 'lyon-tutorials'",
             "cargo": {
                 "args": [
@@ -263,6 +337,43 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "Debug executable 'macroquad-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=macroquad-tutorials",
+                    "--package=macroquad-tutorials"
+                ],
+                "filter": {
+                    "name": "macroquad-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'macroquad-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=macroquad-tutorials",
+                    "--package=macroquad-tutorials"
+                ],
+                "filter": {
+                    "name": "macroquad-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "Debug executable 'miniquad-tutorials'",
             "cargo": {
                 "args": [
@@ -291,6 +402,43 @@
                 ],
                 "filter": {
                     "name": "miniquad-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'piston-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=piston-tutorials",
+                    "--package=piston-tutorials"
+                ],
+                "filter": {
+                    "name": "piston-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'piston-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=piston-tutorials",
+                    "--package=piston-tutorials"
+                ],
+                "filter": {
+                    "name": "piston-tutorials",
                     "kind": "bin"
                 }
             },
@@ -365,6 +513,43 @@
                 ],
                 "filter": {
                     "name": "sdl2-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'specs-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=specs-tutorials",
+                    "--package=specs-tutorials"
+                ],
+                "filter": {
+                    "name": "specs-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'specs-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=specs-tutorials",
+                    "--package=specs-tutorials"
+                ],
+                "filter": {
+                    "name": "specs-tutorials",
                     "kind": "bin"
                 }
             },
@@ -476,6 +661,43 @@
                 ],
                 "filter": {
                     "name": "winit-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'wry-tutorials'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=wry-tutorials",
+                    "--package=wry-tutorials"
+                ],
+                "filter": {
+                    "name": "wry-tutorials",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'wry-tutorials'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=wry-tutorials",
+                    "--package=wry-tutorials"
+                ],
+                "filter": {
+                    "name": "wry-tutorials",
                     "kind": "bin"
                 }
             },
